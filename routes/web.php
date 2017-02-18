@@ -1,5 +1,5 @@
 <?php
-
+use App\Contact;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,6 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/hi', function () {
-    return view('test');
+// Route::get('/hi', function () {
+//     return view('test');
+// });
+Route::get('/contacts', function () {
+  $contacts=Contact::all();
+    return $contacts;
+});
+
+Route::get('/contacts/{id}', function ($id) {
+  $contact=Contact::find($id);
+    return $contact;
 });

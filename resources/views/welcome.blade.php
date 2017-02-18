@@ -10,13 +10,18 @@
         <!-- Fonts -->
 
         <link href="css/app.css" rel="stylesheet" type="text/css">
-        <script src="js/app.js"></script>
-          <script src="components/angular/angular.min.js"></script>
+
 
         <!-- Styles -->
 
     </head>
-    <body>
-        Main
+    <body ng-app="contactApp" ng-controller="contactController">
+      <ul  ng-repeat="contact in contacts">
+        <li>{% contact.name %}</li>
+      </ul>
+
     </body>
+
+    <script src="components/angular/angular.min.js"></script>
+    <script src="js/main.js"></script>
 </html>
