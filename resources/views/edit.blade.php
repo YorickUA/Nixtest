@@ -16,6 +16,6 @@
 
     </head>
     <body>
-        <span>Hi</span>
+        <span>{{$contact->name}}</span>
     </body>
 </html>

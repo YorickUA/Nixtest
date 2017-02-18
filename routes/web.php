@@ -1,5 +1,7 @@
 <?php
 use App\Contact;
+use Illuminate\http\Request;
+use \Illuminate\Database\QueryException;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,7 +25,23 @@ Route::get('/contacts', function () {
     return $contacts;
 });
 
+Route::post('/contacts', function (Request $data) {
+
+    $contact= new Contact;
+    $contact->name=$data->name;
+    $contact->surname=$data->surname;
+    $contact->phone=$data->phone;
+    $contact->birthday=$data->birthday;
+    $contact->info=$data->info;
+    try{
+      $contact->save();
+    } catch(QueryException $ex){
+      return "false";
+    }
+    return;
+});
+
 Route::get('/contacts/{id}', function ($id) {
   $contact=Contact::find($id);
-    return $contact;
+    return view('edit', compact('contact'));
 });

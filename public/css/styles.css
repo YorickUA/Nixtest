@@ -1,0 +1,20 @@
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#inputForm{
+  padding: 5px;
+  margin-top: auto;
+}
+#add{
+  float:right;
+  margin-top: 5px;
+}
+.contactContainer, .contactContainer h3{
+  margin-left: 5px;
+  margin-right: 5px
+}
+.incomplete{
+  background-color: red!important;
+}
