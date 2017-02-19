@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder
         'surname' => "Random",
         'phone' => "234",
         'info' => "Thats me",
-        'birthday' => "1991-05-27",
+        'birthday' => "1991-02-23",
         'created_at' => date("Y-m-d"),
         'updated_at' => date("Y-m-d")
     ]);
@@ -34,7 +34,7 @@ class DatabaseSeeder extends Seeder
        'surname' => "Bird",
        'phone' => "567",
        'info' => "Thats me",
-       'birthday' => "1991-05-27",
+       'birthday' => "1991-02-27",
        'created_at' => date("Y-m-d"),
        'updated_at' => date("Y-m-d")
    ]);

@@ -7,9 +7,9 @@ input[type=number]::-webkit-outer-spin-button {
   padding: 5px;
   margin-top: auto;
 }
-#add{
+.ourButton{
   float:right;
-  margin-top: 5px;
+  margin-top: 5px!important;
 }
 .contactContainer, .contactContainer h3{
   margin-left: 5px;
@@ -37,4 +37,8 @@ a.contactRecord.veryClose:hover{
 a.contactRecord.close:hover{
   color:black;
   box-shadow: 0 0 2px 3px green;
+}
+.buttonBox{
+  padding-top: 5px;
+  overflow: auto;
 }
