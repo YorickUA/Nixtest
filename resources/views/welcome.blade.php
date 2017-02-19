@@ -24,7 +24,7 @@
           <div class="column">
             <div class="ui two column stackable grid">
               <div class="eight wide column ">
-                <input  class="ui segment"  type="text" name="Name" placeholder="Name" ng-model="newContact.name" required></input>
+                <input  class="ui segment"  type="text" name="Name" placeholder="Name*" ng-model="newContact.name" required></input>
 
               </div>
               <div class="eight wide column ">
@@ -33,7 +33,7 @@
             </div>
             <div class="ui two column stackable grid">
               <div class="eight wide column ">
-                <input class="column" type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" name="phone" placeholder="Phone" ng-model="newContact.phone" required></input>
+                <input class="column" type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" name="phone" placeholder="Phone*" ng-model="newContact.phone" required></input>
               </div>
               <div class="eight wide column ">
                 <input class="column" type="date" name="birthday" placeholder="Birthday" ng-model="newContact.birthday"></input>
@@ -43,8 +43,11 @@
           <div class="ui column" style="padding: 9px;">
             <textarea  name="info" placeholder="Notes" ng-model="newContact.info" rows="5"></textarea>
             <span class="danger" ng-show="error">Duplicated phone number</span>
+            <span ng-show="!inputForm.$valid">Fill all required fields*</span>
             <div>
-              <input id="add" class="ui button" type="submit" value="Add">
+              <div class="buttonBox">
+                <input id="add" class="ui button ourButton" type="submit" value="Add">
+              </div>
             </div>
           </div>
         </form>
