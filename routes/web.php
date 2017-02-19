@@ -41,7 +41,7 @@ Route::post('/contacts', function (Request $data) {
     return;
 });
 
-Route::get('/contacts/{id}', function ($id) {
+Route::get('/edit/{id}', function ($id) {
   $contact=Contact::find($id);
     return view('edit', compact('contact'));
 });

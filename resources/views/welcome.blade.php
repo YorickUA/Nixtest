@@ -9,6 +9,8 @@
 
         <link href="css/styles.css" rel="stylesheet" type="text/css">
         <link href="components/semantic/dist/semantic.min.css" rel="stylesheet" type="text/css">
+        <script src="components/angular/angular.min.js"></script>
+        <script src="js/main.js"></script>
 
 
         <!-- Styles -->
@@ -54,7 +56,7 @@
       <div class=" contactContainer ui segment">
         <h3>Contacts</h3>
         <div class="contactContainer"  ng-repeat="contact in contacts|filter:srcVal">
-          <div class="contactRecord ui segment three stackable grid">
+          <a href="edit/{%contact.id%}" class="contactRecord {%dateDiff(contact)%}  ui segment three stackable grid">
             <div class="four wide column">
               {% contact.name %}   {% contact.surname %}
             </div>
@@ -67,12 +69,10 @@
             <div class="five wide column">
               Notes: {% contact.info %}
             </div>
-          </div>
+          </a>
         </div>
       </div>
 
     </body>
 
-    <script src="components/angular/angular.min.js"></script>
-    <script src="js/main.js"></script>
 </html>
